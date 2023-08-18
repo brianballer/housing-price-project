@@ -29,6 +29,11 @@ library(caret)
 library(reshape2)
 ```
 
+
+```{r}
+knitr::purl("Models_Master_4.Rmd")
+```
+
 ## Models
 
 ```{r Load Data Frame}
@@ -108,7 +113,7 @@ rmse.kaggle <- function(mod, newdata, response) {
 
 ### Null Model
 
-```{r Linear Model}
+```{r Null Model}
 null.mod <- lm(log(SalePrice) ~ 1, data=tr.dfoh)   ## linear uses one-hot encoded df
 #summary(lm.mod)
 
